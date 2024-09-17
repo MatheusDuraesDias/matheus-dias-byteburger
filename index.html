@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>ByteBurger</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="menu">
+        <h1>Menu ByteBurger</h1>
+        <ul>
+            <li><button onclick="addItem('Callback Burguer')">Callback Burguer</button></li>
+            <li><button onclick="addItem('Null-Burguer')">Null-Burguer (veg)</button></li>
+            <li><button onclick="addItem('Crispy Turing')">Crispy Turing</button></li>
+            <li><button onclick="addItem('Mongo Melt')">Mongo Melt</button></li>
+            <li><button onclick="addItem('Webwrap')">Webwrap</button></li>
+            <li><button onclick="addItem('NPM Nuggets')">NPM Nuggets</button></li>
+            <li><button onclick="addItem('Float Juice')">Float Juice</button></li>
+            <li><button onclick="addItem('Array Apple')">Array Apple</button></li>
+            <li><button onclick="addItem('Async Berry')">Async Berry</button></li>
+        </ul>
+    </div>
+    <div id="order">
+        <h1>Seu pedido</h1>
+        <ul id="orderItems"></ul>
+        <label>
+            <input type="checkbox" id="prioridade"> Prioridade
+        </label>
+        <button onclick="clearOrder()">Limpar</button>
+        <button onclick="submitOrder(document.getElementById('prioridade').checked)">Enviar pedido</button>
+        <p id="estimatedTime">Tempo estimado: 0m 0s</p>
+        <p id="estimatedTimePriority">Tempo estimado com prioridade: 0m 0s</p>
+    </div>    
+    <div id="orderStatus">
+        <h1>Status Pedidos</h1>
+        <ul id="orderList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
